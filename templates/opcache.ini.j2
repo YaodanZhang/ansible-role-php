@@ -1,5 +1,8 @@
 zend_extension={{ php_opcache_zend_extension }}
 opcache.enable={{ php_opcache_enable }}
+{% if php_opcache_save_comments is defined %}
+opcache.save_comments={{ php_opcache_save_comments }}
+{% endif %}
 opcache.enable_cli={{ php_opcache_enable_cli }}
 opcache.memory_consumption={{ php_opcache_memory_consumption }}
 opcache.interned_strings_buffer={{ php_opcache_interned_strings_buffer }}
